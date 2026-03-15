@@ -11,13 +11,14 @@ def parse_args() -> argparse.Namespace:
   parser.add_argument("--csv", required=True, help="Path to the options CSV file.")
   parser.add_argument("--save", default="outputs/instrument_summaries.json", help="Path to save JSON output.")
   parser.add_argument("--top-anomalies", type=int, default=3, help="Number of anomaly results to keep per underlying.")
+  parser.add_argument("--narrative-style", choices=["default", "short"], default="default", help="Narrative style: 'default' for full paragraph, 'short' for concise key points.")
   return parser.parse_args()
 
 def main() -> None:
   args = parse_args()
   df = load_options_csv(args.csv)
   summaries = build_summaries(df)
-  narrator = build_narrator()
+  narrator = build_narrator(style=args.narrative_style)
   
   records = []
   for summary in summaries:
