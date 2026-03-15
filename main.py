@@ -3,6 +3,7 @@ import argparse
 from src.volsurf.data_loader import load_options_csv
 from src.volsurf.summary import build_summaries
 from src.volsurf.llm import build_narrator
+from src.volsurf.record import render_console_block,save_json
 
 
 def parse_args() -> argparse.Namespace:
@@ -18,11 +19,19 @@ def main() -> None:
   summaries = build_summaries(df)
   narrator = build_narrator()
   
-  print(summaries)
-  # call llm
-  
-  print(f"Saved {len([])} summaries to {args.save}")
-
+  records = []
+  for summary in summaries:
+    narrative = narrator.generate(summary)
+    print(render_console_block(summary, narrative))
+    records.append(
+      {
+        **summary.to_dict(),
+        "narrative": narrative,
+      }
+    )
+    
+  save_json(args.save, records)
+  print(f"Saved {len(records)} summaries to {args.save}")
 
 if __name__ == "__main__":
     main()
