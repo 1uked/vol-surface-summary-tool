@@ -2,7 +2,7 @@ from __future__ import annotations
 
 import json
 
-from .summary import InstrumentSummary
+from src.volsurf.summary import InstrumentSummary
 
 SYSTEM_PROMPT = """You are a careful quantitative analyst.
 Write exactly one paragraph of plain-English commentary about an options implied-volatility surface.
