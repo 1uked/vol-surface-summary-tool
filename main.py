@@ -1,5 +1,7 @@
 import argparse
 
+from src.volsurf.data_loader import load_options_csv;
+
 def parse_args() -> argparse.Namespace:
   parser = argparse.ArgumentParser(description="Generate narratives for options vol surfaces.")
   parser.add_argument("--csv", required=True, help="Path to the options CSV file.")
@@ -9,7 +11,7 @@ def parse_args() -> argparse.Namespace:
 
 def main() -> None:
   args = parse_args()
-  # load data
+  df = load_options_csv(args.csv)
   # generate summaries
   # call llm
   
