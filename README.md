@@ -18,7 +18,7 @@ python main.py --csv data/options_eod.csv --narrative-style short
 ## Example output
 
 ```text
-% python main.py --csv data/options_eod.csv --narrative-style short
+% python main.py --csv data/options_eod.csv
 
 Underlying: AAPL
 Rows: 1204
@@ -33,5 +33,5 @@ Total volume: 225,506 | Open interest: 961,387
 Front expiry volume share: 11.53%
 Anomalies: 2
 
-Narrative: AAPL's implied-volatility surface over the March 3–7, 2025 observation window shows a mean IV of roughly 21.7%, with puts and calls nearly at parity (put avg IV 21.66% vs. call avg IV 21.77%), a modest positive strike skew of 0.018, and slight negative smile curvature, indicating a mildly downward-sloping skew with minimal wing convexity. The term structure is gently upward-sloping at approximately 1.3 vol points per 30 days, and front-expiry volume accounts for only about 11.5% of total activity, suggesting trader interest is distributed across the nine available expirations rather than concentrated in the nearest contract. Liquidity appears adequate given 225,506 contracts traded against 961,387 in open interest, though the median relative spread of 3.3% and average dollar spread of $0.57 point to moderate bid-ask friction. Two notable anomalies are present: a May 2 200-strike call with IV of 6.50 versus a fitted value of 0.95 (residual +5.56), and an April 25 150-strike put with IV of 5.74 versus a fitted value of 2.78 (residual +2.96), both representing deep-strike outliers that are likely artifacts of stale quotes or extremely thin markets rather than genuine surface features.
+Narrative: AAPL's implied-volatility surface over the five-day observation window shows an average IV of approximately 21.7%, with put and call average IVs of roughly 21.7% each — a difference of less than one percentage point that is consistent with near parity between the two option types. The strike skew summary statistic is a small positive value (0.018), though without an explicitly defined sign convention no directional economic interpretation is warranted; smile curvature is essentially negligible at roughly −0.000023, suggesting the strike profile is quite flat with minimal convexity across the observed strikes. The term structure slopes modestly upward at about 1.3 percentage points per 30 days, which is consistent with a roughly flat-to-mildly-upward-sloping term structure given the small magnitude. Quoted spreads appear moderate, with a median relative spread of approximately 3.3%, and volume is distributed across expirations rather than heavily concentrated in the front expiry, which accounts for about 11.5% of total volume. Two observations stand out as notable outliers relative to the fitted surface: a May 2, 2025 call at the 200-strike with an IV of 6.504 versus a fitted value of 0.948 (residual +5.556), and an April 25, 2025 put at the 150-strike with an IV of 5.744 versus a fitted value of 2.781 (residual +2.963); the data does not establish whether these represent genuine signals or other sources of deviation, only that they appear as significant outliers relative to the modeled surface.
 ```

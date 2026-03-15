@@ -31,9 +31,9 @@ def save_json(path: str | Path, records: Iterable[dict]) -> None:
 def pct(value: float | None) -> str:
   if value is None:
     return "n/a"
-  return f"{value * 100:.2f}%"
+  return f"{value * 100:.5f}%"
 
 def vol_pts(value: float | None) -> str:
   if value is None:
     return "n/a"
-  return f"{value * 100:.2f} vol pts"
+  return f"{value * 100:.5f} vol pts"
