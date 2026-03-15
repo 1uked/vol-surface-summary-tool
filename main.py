@@ -14,6 +14,8 @@ def main() -> None:
   args = parse_args()
   df = load_options_csv(args.csv)
   summaries = build_summaries(df)
+  
+  print(summaries)
   # call llm
   
   print(f"Saved {len([])} summaries to {args.save}")
