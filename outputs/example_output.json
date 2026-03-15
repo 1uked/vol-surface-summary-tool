@@ -1,0 +1,161 @@
+[
+  {
+    "underlying": "AAPL",
+    "rows": 1204,
+    "trade_dates": [
+      "2025-03-03",
+      "2025-03-04",
+      "2025-03-05",
+      "2025-03-06",
+      "2025-03-07"
+    ],
+    "expiry_count": 9,
+    "dte_min": 1,
+    "dte_max": 56,
+    "avg_iv": 0.21713564784053155,
+    "put_avg_iv": 0.2165871480865225,
+    "call_avg_iv": 0.21768232835820894,
+    "strike_skew": 0.017530124999999966,
+    "smile_curvature": -2.337500000000603e-05,
+    "term_slope_per_30d": 0.0132199846413666,
+    "avg_spread": 0.5703580349708576,
+    "median_relative_spread": 0.0332541567695962,
+    "total_volume": 225506,
+    "total_open_interest": 961387,
+    "front_expiry_volume_share": 0.11527852917439003,
+    "anomaly_count": 2,
+    "anomaly_examples": [
+      "2025-05-02 call strike 200.00 had IV 6.504, vs fitted 0.948 (residual +5.556).",
+      "2025-04-25 put strike 150.00 had IV 5.744, vs fitted 2.781 (residual +2.963)."
+    ],
+    "narrative": "AAPL's implied-volatility surface across the five-day observation window (3\u20137 March 2025) spans nine expiries from 1 to 56 days to expiration, with an average IV of roughly 21.7% and near-symmetry between puts (21.7%) and calls (21.8%). The strike skew of +0.018 indicates a mild conventional left-skew\u2014downside puts carry modestly higher implied volatility than equidistant upside calls\u2014while the smile curvature of approximately \u22120.000023 is essentially flat, suggesting the surface is closer to a linear skew than a pronounced volatility smile. The term structure slopes gently upward at about 1.3 volatility points per 30 days, consistent with a normal contango shape where near-dated options are priced cheaper than longer-dated ones; notably, front-expiry volume accounts for only about 11.5% of total volume (225,506 contracts traded against 961,387 in open interest), implying that activity is distributed across intermediate and back expiries rather than concentrated in the nearest term. Liquidity appears adequate but not tight, with a median relative bid-ask spread of 3.3% and an average dollar spread of $0.57. Two anomalies stand out: a 2025-05-02 call at the 200-strike carries an IV of 6.50 versus a fitted value of 0.95 (residual +5.56), and a 2025-04-25 put at the 150-strike shows an IV of 5.74 against a fitted 2.78 (residual +2.96); both are deep out-of-the-money options where thin liquidity can produce stale or crossed quotes that distort the fitted surface, and they should be treated as data artifacts rather than reliable price signals."
+  },
+  {
+    "underlying": "AMZN",
+    "rows": 1371,
+    "trade_dates": [
+      "2025-03-03",
+      "2025-03-04",
+      "2025-03-05",
+      "2025-03-06",
+      "2025-03-07"
+    ],
+    "expiry_count": 9,
+    "dte_min": 1,
+    "dte_max": 56,
+    "avg_iv": 0.23780275419401897,
+    "put_avg_iv": 0.24731518248175183,
+    "call_avg_iv": 0.22830419241982508,
+    "strike_skew": 0.018661499999999984,
+    "smile_curvature": -0.00012457142857141834,
+    "term_slope_per_30d": -0.001593535624852723,
+    "avg_spread": 0.6283468038207201,
+    "median_relative_spread": 0.033179723502304095,
+    "total_volume": 256643,
+    "total_open_interest": 1104598,
+    "front_expiry_volume_share": 0.07905923792973119,
+    "anomaly_count": 6,
+    "anomaly_examples": [
+      "2025-03-21 call strike 185.00 had IV 8.394, vs fitted 1.193 (residual +7.201).",
+      "2025-04-25 call strike 200.00 had IV 8.255, vs fitted 1.231 (residual +7.023).",
+      "2025-03-14 put strike 215.00 had IV 7.911, vs fitted 1.027 (residual +6.884)."
+    ],
+    "narrative": "AMZN's implied-volatility surface over the five-day observation window (3 March\u20137 March 2025) spans nine expiries from 1 to 56 DTE, with an average IV of roughly 23.8%. Puts carry a modest premium over calls (24.7% vs. 22.8%), and the positive strike skew of ~1.9 volatility points confirms a conventional left-skew profile in which downside strikes are priced richer than equivalent upside strikes; the slightly negative smile curvature (\u22120.00012) suggests the skew is nearly linear rather than strongly convex, implying limited additional premium at the deep wings. The term structure is very mildly inverted, with a slope of approximately \u22120.16 vol points per 30 days, indicating near-term expiries carry marginally higher IV than the back end, though the effect is small enough to be nearly flat. Liquidity appears adequate but not exceptional: the median relative bid-ask spread of ~3.3% and average dollar spread of ~$0.63 are moderate, and the front-expiry volume share of only ~7.9% is notably low, suggesting trader interest is concentrated in intermediate rather than the nearest expiries, with total open interest of roughly 1.1 million contracts supporting reasonable depth overall. Six anomalies were flagged, three of which are striking: a March 21 call at the 185 strike, an April 25 call at 200, and a March 14 put at 215 each show IV readings near 8.0\u20138.4 against model-fitted values below 1.3, producing residuals of roughly +7 vol units; these extreme outliers almost certainly reflect stale, crossed, or erroneous quotes rather than genuine market pricing, and should be treated with caution or filtered before any surface-fitting or risk application."
+  },
+  {
+    "underlying": "GOOGL",
+    "rows": 1202,
+    "trade_dates": [
+      "2025-03-03",
+      "2025-03-04",
+      "2025-03-05",
+      "2025-03-06",
+      "2025-03-07"
+    ],
+    "expiry_count": 9,
+    "dte_min": 1,
+    "dte_max": 56,
+    "avg_iv": 0.24501662645590686,
+    "put_avg_iv": 0.24487331281198002,
+    "call_avg_iv": 0.24515994009983363,
+    "strike_skew": 0.019253500000000007,
+    "smile_curvature": 0.0003880178571428333,
+    "term_slope_per_30d": -0.025656850917940583,
+    "avg_spread": 0.5588795986622074,
+    "median_relative_spread": 0.03321583651467887,
+    "total_volume": 244172,
+    "total_open_interest": 1053186,
+    "front_expiry_volume_share": 0.0973125501695526,
+    "anomaly_count": 6,
+    "anomaly_examples": [
+      "2025-03-21 call strike 165.00 had IV 8.887, vs fitted 1.377 (residual +7.511).",
+      "2025-04-04 put strike 195.00 had IV 8.693, vs fitted 1.263 (residual +7.430).",
+      "2025-03-14 put strike 155.00 had IV 8.448, vs fitted 1.258 (residual +7.191)."
+    ],
+    "narrative": "GOOGL's implied-volatility surface over the five-day observation window (3 March\u20137 March 2025) spans nine expiries from 1 to 56 days to expiration, with an average IV of approximately 24.5% and a near-negligible difference between put average IV (24.49%) and call average IV (24.52%), indicating a broadly symmetric surface at the aggregate level. The strike skew of roughly +0.019 suggests a mild positive skew \u2014 calls carry marginally higher implied volatility than puts on average \u2014 while the smile curvature of 0.000388 points to a shallow but present convexity across strikes rather than a flat volatility line. The term structure slopes downward at approximately \u22122.6 volatility points per 30 days, reflecting a modest inverted term structure where near-dated options are priced richer than longer-dated ones. Liquidity appears adequate but not deep: total volume of 244,172 contracts against open interest of 1,053,186 implies moderate turnover, the median relative bid-ask spread of 3.3% is reasonable though not tight, and the front-expiry volume share of only 9.7% is notably low, suggesting activity is distributed across intermediate expirations rather than concentrated in the nearest contract. Six anomalies were detected, with three prominent examples \u2014 a 2025-03-21 call at the 165-strike, a 2025-04-04 put at the 195-strike, and a 2025-03-14 put at the 155-strike \u2014 each carrying raw IVs in the 8.4\u20138.9 range against model-fitted values near 1.3, producing residuals above +7.0; these extreme outliers likely reflect stale, crossed, or erroneous quotes at deep out-of-the-money strikes with minimal liquidity rather than genuine market pricing, and should be treated with caution or filtered before any surface calibration."
+  },
+  {
+    "underlying": "MSFT",
+    "rows": 1368,
+    "trade_dates": [
+      "2025-03-03",
+      "2025-03-04",
+      "2025-03-05",
+      "2025-03-06",
+      "2025-03-07"
+    ],
+    "expiry_count": 9,
+    "dte_min": 1,
+    "dte_max": 56,
+    "avg_iv": 0.25365256213450293,
+    "put_avg_iv": 0.2375307543859649,
+    "call_avg_iv": 0.26977436988304093,
+    "strike_skew": 0.018594700000000006,
+    "smile_curvature": 4.309999999999037e-05,
+    "term_slope_per_30d": -0.0021759697641226625,
+    "avg_spread": 1.1906607929515418,
+    "median_relative_spread": 0.0335630188571545,
+    "total_volume": 262265,
+    "total_open_interest": 1111465,
+    "front_expiry_volume_share": 0.12411492193010885,
+    "anomaly_count": 9,
+    "anomaly_examples": [
+      "2025-03-28 call strike 475.00 had IV 8.375, vs fitted 1.433 (residual +6.942).",
+      "2025-03-14 call strike 465.00 had IV 7.886, vs fitted 1.097 (residual +6.790).",
+      "2025-03-28 put strike 395.00 had IV 7.668, vs fitted 1.076 (residual +6.592)."
+    ],
+    "narrative": "MSFT's implied-volatility surface, observed across five trading days in early March 2025 and spanning nine expiries from 1 to 56 days to expiration, shows an average IV of approximately 25.4%, with calls running notably higher (27.0%) than puts (23.8%), producing a positive strike-skew coefficient of roughly 0.019 \u2014 an unusual \"reverse\" or call-side skew relative to the more typical put-heavy skew seen in equity names, suggesting the market is pricing relatively more uncertainty into upside strikes than downside ones over this window. The smile curvature is modest (4.3e-05), indicating a fairly flat wing structure rather than a pronounced volatility smile. Term structure slopes gently downward at about \u22120.22 volatility points per 30 days, implying near-term implied volatility is marginally elevated relative to the short back end of this curve, though the effect is small. Liquidity appears reasonably healthy with 262,265 contracts traded and over 1.1 million in open interest, though the front expiry captures only about 12% of volume, suggesting activity is distributed across intermediate expirations; the median relative bid-ask spread of 3.4% and average dollar spread of $1.19 are consistent with a liquid large-cap name but not exceptionally tight. Nine anomalies were flagged, with the most striking being deep out-of-the-money calls (strikes 465 and 475, March 14 and March 28 expiries) and a far-OTM put (strike 395, March 28) each carrying raw IVs in the 7.7\u20138.4 range against model-fitted values near 1.1\u20131.4 \u2014 residuals exceeding 6.5 volatility units \u2014 which almost certainly reflect stale, crossed, or extremely wide markets on illiquid strikes rather than genuine pricing signals, and should be treated as data artifacts pending volume confirmation."
+  },
+  {
+    "underlying": "NVDA",
+    "rows": 1367,
+    "trade_dates": [
+      "2025-03-03",
+      "2025-03-04",
+      "2025-03-05",
+      "2025-03-06",
+      "2025-03-07"
+    ],
+    "expiry_count": 9,
+    "dte_min": 1,
+    "dte_max": 56,
+    "avg_iv": 0.23133923043160204,
+    "put_avg_iv": 0.22602509809663252,
+    "call_avg_iv": 0.23664559356725148,
+    "strike_skew": 0.017163799999999993,
+    "smile_curvature": 0.00044358571428572413,
+    "term_slope_per_30d": -0.021456882698809826,
+    "avg_spread": 2.572092511013216,
+    "median_relative_spread": 0.03481925876232644,
+    "total_volume": 248737,
+    "total_open_interest": 1109078,
+    "front_expiry_volume_share": 0.0935526278760297,
+    "anomaly_count": 5,
+    "anomaly_examples": [
+      "2025-03-28 put strike 985.00 had IV 7.360, vs fitted 1.069 (residual +6.291).",
+      "2025-04-18 call strike 895.00 had IV 7.316, vs fitted 1.128 (residual +6.188).",
+      "2025-04-04 call strike 1005.00 had IV 7.386, vs fitted 1.341 (residual +6.045)."
+    ],
+    "narrative": "NVDA's implied-volatility surface over the March 3\u20137, 2025 observation window spans nine expiries from 1 to 56 days to expiration, with an average IV of approximately 23.1%. The skew is modestly positive (strike-skew coefficient of +0.017), meaning calls carry slightly higher implied volatility than puts on average\u2014an atypical \"reverse\" or call-bid skew relative to the conventional equity put-skew\u2014while smile curvature is very low (0.00044), indicating a nearly flat cross-sectional smile with minimal wing premium. The term structure slopes downward at roughly \u22122.1 vol points per 30 days, signaling that near-dated options are priced richer than longer-dated ones, consistent with an inverted term structure. Liquidity appears adequate in aggregate\u2014248,737 contracts traded against 1.1 million in open interest\u2014but the front expiry captures only 9.4% of total volume, suggesting activity is concentrated in intermediate maturities rather than the nearest expiry; the median relative bid-ask spread of 3.5% and average dollar spread of $2.57 point to moderate but not tight market-making conditions. Five anomalies were flagged, with three notable examples showing deep-out-of-the-money strikes (985 put for March 28, 895 call for April 18, and 1005 call for April 4) carrying IVs in the 7.3\u20137.4 range against model-fitted values near 1.1\u20131.3\u2014residuals exceeding six vol points\u2014which likely reflect stale, crossed, or erroneous quotes rather than genuine market pricing, and should be treated with caution or filtered before any calibration exercise."
+  }
+]
